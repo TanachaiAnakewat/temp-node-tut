@@ -4,6 +4,8 @@ const { readFile, writeFile } = require('fs');
 //callback function run everytime clicking button
 
 console.log('start')
+
+//readFile is asynchronous ->event loop off load this task
 readFile('./content/first.txt', 'utf8', (err, result) => {
     if (err) {
         console.log(err)
